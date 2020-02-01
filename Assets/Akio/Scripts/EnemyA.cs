@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using GGJ2020;
 
 public class EnemyA : Enemy
 {
+    Unit unit;
     GameObject gameObjectPlayer;
     Rigidbody2D rbody2D;
 
@@ -11,6 +13,7 @@ public class EnemyA : Enemy
     protected override void Start()
     {
         base.Start();
+        unit = GetComponent<Unit>();
         gameObjectPlayer = GameObject.FindGameObjectWithTag("Player");
         rbody2D = GetComponent<Rigidbody2D>();
     }
@@ -26,7 +29,7 @@ public class EnemyA : Enemy
         Vector3 relative = new Vector3(relativeX, relativeY, relativeZ);
         Vector3 force = Vector3.Normalize(relative);
         Vector2 force2D = new Vector2(force.x, force.y);
-        Debug.Log(force2D);
+
         rbody2D.velocity = force2D;
     }
 }
