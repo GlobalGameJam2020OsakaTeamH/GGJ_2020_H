@@ -25,5 +25,11 @@ public class PlayerStats : MonoBehaviour
         set => ArmorRef.Value = value;
     }  
 
+    [SerializeField]
+    private IntegerBindingVariable SpeedRef;
+    public int Speed{
+        get => SpeedRef.Value;
+        set => SpeedRef.Value = value;
+    }  
 
 }
