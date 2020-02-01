@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace GGJ2020 {
     [RequireComponent(typeof(Rigidbody2D))]
@@ -14,7 +15,7 @@ namespace GGJ2020 {
 
         public void UseSword() {
             if (sword) {
-                sword.Use();
+                sword.Use(direction);
             }
         }
 
