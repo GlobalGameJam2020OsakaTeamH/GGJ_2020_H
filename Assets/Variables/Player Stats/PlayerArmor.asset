@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64623b3093b3da643a00fe23b9df3608, type: 3}
-  m_Name: GearCount 1
+  m_Name: PlayerArmor
   m_EditorClassIdentifier: 
   StartingValue: 0
   value: 0
