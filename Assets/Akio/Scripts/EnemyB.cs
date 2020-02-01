@@ -5,6 +5,8 @@ using GGJ2020;
 
 public class EnemyB : Enemy
 {
+    const float ITEM_ACCELERATE_SCORE = 1.2f;
+    const float ITEM_DECELERATE_SCORE = 0.993f;
     [SerializeField] GameObject gameObjectItem;
     [SerializeField] GameObject gameObjectDestroyEffect;
 
@@ -42,10 +44,10 @@ public class EnemyB : Enemy
             Destroy(gameObject);
             if (true)
             {
-                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(-1.0f, -1.0f), 0.993f) ;
-                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(1.0f, 1.0f), 0.993f);
-                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(1.0f, -1.0f), 0.993f);
-                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(-1.0f, 1.0f), 0.993f);
+                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(-1.0f, -1.0f), ITEM_ACCELERATE_SCORE, ITEM_DECELERATE_SCORE) ;
+                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(1.0f, 1.0f), ITEM_ACCELERATE_SCORE, ITEM_DECELERATE_SCORE);
+                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(1.0f, -1.0f), ITEM_ACCELERATE_SCORE, ITEM_DECELERATE_SCORE);
+                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(-1.0f, 1.0f), ITEM_ACCELERATE_SCORE, ITEM_DECELERATE_SCORE);
             }
         }
     }

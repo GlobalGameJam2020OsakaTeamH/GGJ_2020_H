@@ -6,6 +6,7 @@ public class DroppedItem : MonoBehaviour
 {
     [SerializeField] float magnetSpeed;
     Vector2 startVelocity;
+    float accelerateScore;
     float decelerateScore;
 
     Rigidbody2D rbody2D;
@@ -13,13 +14,15 @@ public class DroppedItem : MonoBehaviour
     GameObject gameObjectTarget;
 
     bool isMagnet = false;
+    bool isAccelerate = true;
 
     // Start is called before the first frame update
     void Start()
     {
         gameObjectTarget = GameObject.FindGameObjectWithTag("Player");
         rbody2D = GetComponent<Rigidbody2D>();
-        rbody2D.velocity = startVelocity;
+
+        StartCoroutine(Introduction());
     }
 
     // Update is called once per frame
@@ -45,13 +48,17 @@ public class DroppedItem : MonoBehaviour
             {
                 isMagnet = true;
             }
-            rbody2D.velocity *= decelerateScore;
+            else
+            {
+                rbody2D.velocity *= decelerateScore;
+            }
         }
     }
 
-    public void Initialize(Vector2 startVelocity, float decelerateScore)
+    public void Initialize(Vector2 startVelocity, float accelerateScore, float decelerateScore)
     {
         this.startVelocity = startVelocity;
+        this.accelerateScore = accelerateScore;
         this.decelerateScore = decelerateScore;
     }
 
@@ -62,5 +69,11 @@ public class DroppedItem : MonoBehaviour
             Debug.Log("Got item");
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator Introduction()
+    {
+        yield return new WaitForSeconds(0.3f);
+        rbody2D.velocity = startVelocity;
     }
 }
