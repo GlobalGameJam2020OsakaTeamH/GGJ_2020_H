@@ -26,13 +26,13 @@ namespace GGJ2020 {
 
         bool UseSword {
             get {
-                return Input.GetButton("Fire1");
+                return Input.GetButtonDown("Fire1");
             }
         }
 
         bool UseGun {
             get {
-                return Input.GetButton("Fire2");
+                return Input.GetButtonDown("Fire2");
             }
         }
     }
