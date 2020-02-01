@@ -164,12 +164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833c9d4251ded45bf9ca47b2abdb1886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitLayer:
-    serializedVersion: 2
-    m_Bits: 1024
-  weaponLayer:
-    serializedVersion: 2
-    m_Bits: 2048
+  unitLayer: 10
+  weaponLayer: 11
   bodyPrefab: {fileID: 1879659682900587338, guid: 4948d44591f724865ae06aaa2012d6d6,
     type: 3}
   swordPrefab: {fileID: 4159024967010902372, guid: 8d716c5263562477985d1e58d899fcaa,
@@ -360,12 +356,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833c9d4251ded45bf9ca47b2abdb1886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitLayer:
-    serializedVersion: 2
-    m_Bits: 1024
-  weaponLayer:
-    serializedVersion: 2
-    m_Bits: 2048
+  unitLayer: 10
+  weaponLayer: 11
   bodyPrefab: {fileID: 386655062948876309, guid: d18e227b6087e447fae012c575a23e0d,
     type: 3}
   swordPrefab: {fileID: 4159024967010902372, guid: 8d716c5263562477985d1e58d899fcaa,

@@ -5,8 +5,12 @@ using GGJ2020;
 
 public class EnemyB : Enemy
 {
+    [SerializeField] GameObject gameObjectDestroyEffect;
+
     Unit unit;
     GameObject gameObjectTarget;
+
+    int life = 5;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -25,6 +29,18 @@ public class EnemyB : Enemy
         float relativeY = gameObjectTarget.transform.position.y - transform.position.y;
         float angle = Mathf.Atan2(relativeY, relativeX) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
+    }
+
+    public override void OnWeaponHit()
+    {
+        Debug.Log("Hit by player bullet");
+        life--;
+        if (life <= 0)
+        {
+            Instantiate(gameObjectDestroyEffect, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
+            Destroy(gameObject);
+
+        }
     }
 
     IEnumerator IntervalShoot()

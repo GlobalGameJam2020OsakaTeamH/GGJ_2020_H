@@ -5,10 +5,25 @@ using GGJ2020;
 
 public class EnemyA : Enemy
 {
+    [SerializeField] GameObject gameObjectDestroyEffect;
+
     Unit unit;
     GameObject gameObjectPlayer;
     Rigidbody2D rbody2D;
 
+    int life = 3;
+
+    public override void OnWeaponHit()
+    {
+        Debug.Log("Hit by player bullet");
+        life--;
+        if(life <= 0)
+        {
+            Instantiate(gameObjectDestroyEffect, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
+            Destroy(gameObject);
+
+        }
+    }
     // Start is called before the first frame update
     protected override void Start()
     {
