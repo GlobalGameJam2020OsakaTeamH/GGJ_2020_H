@@ -5,6 +5,7 @@ using GGJ2020;
 
 public class EnemyB : Enemy
 {
+    [SerializeField] GameObject gameObjectItem;
     [SerializeField] GameObject gameObjectDestroyEffect;
 
     Unit unit;
@@ -39,7 +40,13 @@ public class EnemyB : Enemy
         {
             Instantiate(gameObjectDestroyEffect, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
             Destroy(gameObject);
-
+            if (true)
+            {
+                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(-1.0f, -1.0f));
+                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(1.0f, 1.0f));
+                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(1.0f, -1.0f));
+                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(-1.0f, 1.0f));
+            }
         }
     }
 
