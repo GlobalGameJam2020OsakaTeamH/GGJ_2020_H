@@ -98,6 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9193814790812312593}
   - component: {fileID: 8223888885997544068}
+  - component: {fileID: 2826409341859325124}
   m_Layer: 5
   m_Name: ShopItem
   m_TagString: Untagged
@@ -152,6 +153,23 @@ MonoBehaviour:
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
+--- !u!114 &2826409341859325124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2176928964477573494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9890b1b00972f8245b9c0cb730e85024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 0}
+  PlayerStats: {fileID: 0}
+  PlayerInventory: {fileID: 0}
+  GearMediator: {fileID: 1691280936841314217}
+  ScrewMediator: {fileID: 3828787484646439444}
 --- !u!1 &2258046919497796185
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,6 +181,7 @@ GameObject:
   - component: {fileID: 5509812169839361014}
   - component: {fileID: 4941403814920583263}
   - component: {fileID: 3662218858014499970}
+  - component: {fileID: 3828787484646439444}
   m_Layer: 5
   m_Name: Screws Price
   m_TagString: Untagged
@@ -307,6 +326,27 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &3828787484646439444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2258046919497796185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1139d84fa4f609e4bbcc1eeedd24cf3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sourceType: 3
+  value: 0
+  UIComponents:
+  - ContinuousUpdateMode: 0
+    TextFormatter: {fileID: 0}
+    componentReference: {fileID: 3662218858014499970}
+    OnTextChanged:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &3406609333689602157
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,6 +690,7 @@ GameObject:
   - component: {fileID: 5704032266214597895}
   - component: {fileID: 145948834747428866}
   - component: {fileID: 4092655993013810903}
+  - component: {fileID: 1691280936841314217}
   m_Layer: 5
   m_Name: Gears Price
   m_TagString: Untagged
@@ -794,3 +835,24 @@ MonoBehaviour:
   - {fileID: 0}
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &1691280936841314217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6604454773200685166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1139d84fa4f609e4bbcc1eeedd24cf3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sourceType: 3
+  value: 0
+  UIComponents:
+  - ContinuousUpdateMode: 0
+    TextFormatter: {fileID: 0}
+    componentReference: {fileID: 4092655993013810903}
+    OnTextChanged:
+      m_PersistentCalls:
+        m_Calls: []
