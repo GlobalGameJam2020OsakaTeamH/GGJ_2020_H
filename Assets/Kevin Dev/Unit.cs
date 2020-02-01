@@ -4,6 +4,10 @@ using UnityEngine;
 namespace GGJ2020 {
     [RequireComponent(typeof(Rigidbody2D))]
     public class Unit : MonoBehaviour {
+        public LayerMask weaponLayer;
+        public GameObject swordPrefab;
+        public GameObject gunPrefab;
+
         Rigidbody2D body;
         Sword sword;
         Gun gun;
@@ -30,10 +34,21 @@ namespace GGJ2020 {
             }
         }
 
+        void Awake() {
+            if (swordPrefab) {
+                GameObject swordObject = GameObject.Instantiate(swordPrefab, transform);
+                swordObject.layer = weaponLayer;
+                sword = swordObject.GetComponent<Sword>();
+            }
+            if (gunPrefab) {
+                GameObject gunObject = GameObject.Instantiate(gunPrefab, transform);
+                gunObject.layer = weaponLayer;
+                gun = gunObject.GetComponent<Gun>();
+            }
+        }
+
         void Start() {
             body = GetComponent<Rigidbody2D>();
-            sword = GetComponentInChildren<Sword>();
-            gun = GetComponentInChildren<Gun>();
         }
 
         void Update() {
