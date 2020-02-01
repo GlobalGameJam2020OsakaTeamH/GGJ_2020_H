@@ -13,7 +13,11 @@ public class KikuchiTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.Space))
+        {
+            Manager.SceneMoveManager.Instance.Test = true;
+            Manager.MainGameManager.Instance.StartGame();
+        }
     }
 
     void OnCollisionEnter(Collision c)

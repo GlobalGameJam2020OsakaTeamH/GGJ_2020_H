@@ -113,6 +113,7 @@ namespace Manager
             Application.targetFrameRate = 60;
 
             //! とりあえず固定値でシーン名入れていく
+            SceneNameList.Add("dobulemodTest");
             SceneNameList.Add("Main");
 
             DontDestroyOnLoad(this);
