@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1536633061544912283}
   - component: {fileID: 1536633061544912282}
   - component: {fileID: 1536633061544912278}
+  - component: {fileID: 3803139205874248209}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -45,12 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833c9d4251ded45bf9ca47b2abdb1886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  weaponLayer:
-    serializedVersion: 2
-    m_Bits: 512
+  unitLayer: 8
+  weaponLayer: 9
   bodyPrefab: {fileID: 6029947572050691220, guid: d079bf7b9de23418d8f85810051c42f4,
     type: 3}
   swordPrefab: {fileID: 4159024967010902372, guid: 8d716c5263562477985d1e58d899fcaa,
@@ -89,4 +86,16 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &3803139205874248209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536633061544912285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02f6c124e6a44005b19b5bb0ade260c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
