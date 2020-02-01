@@ -26,6 +26,10 @@ namespace GGJ2020 {
             }
         }
 
+        public void SetSpeed(float speed) {
+            this.speed = speed;
+        }
+
         public void UseSword(Vector2 swordDirection) {
             if (sword) {
                 sword.Use(swordDirection);
