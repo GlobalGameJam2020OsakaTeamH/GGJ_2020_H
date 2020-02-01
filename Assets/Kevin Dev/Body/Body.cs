@@ -14,7 +14,7 @@ namespace GGJ2020 {
         void OnCollisionEnter2D(Collision2D collision) {
             if (collisionHandler != null &&
                 (collision.gameObject.GetComponent<Bullet>() || collision.gameObject.GetComponent<SwordBlade>())) {
-                collisionHandler.OnWeaponHit();
+                collisionHandler.OnWeaponHit(collision);
             }
         }
     }

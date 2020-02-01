@@ -16,7 +16,7 @@ public class EnemyA : Enemy
 
     int life = 3;
 
-    public override void OnWeaponHit()
+    public override void OnWeaponHit(Collision2D collision)
     {
         Debug.Log("Hit by player bullet");
         life--;

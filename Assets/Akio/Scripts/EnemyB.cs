@@ -34,7 +34,7 @@ public class EnemyB : Enemy
         transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
     }
 
-    public override void OnWeaponHit()
+    public override void OnWeaponHit(Collision2D collision)
     {
         Debug.Log("Hit by player bullet");
         life--;
