@@ -10,7 +10,8 @@ public class EnemyB : Enemy
     protected override void Start()
     {
         base.Start();
-        gameObjectTarget = GameObject.Find("VirtualPlayer");
+        gameObjectTarget = GameObject.FindGameObjectWithTag("Player");
+        StartCoroutine(IntervalShoot());
     }
 
     // Update is called once per frame
@@ -21,5 +22,14 @@ public class EnemyB : Enemy
         float relativeY = gameObjectTarget.transform.position.y - transform.position.y;
         float angle = Mathf.Atan2(relativeY, relativeX) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
+    }
+
+    IEnumerator IntervalShoot()
+    {
+        while (true)
+        {
+            Debug.Log("Shoot a bullet");
+            yield return new WaitForSeconds(0.8f);
+        }
     }
 }

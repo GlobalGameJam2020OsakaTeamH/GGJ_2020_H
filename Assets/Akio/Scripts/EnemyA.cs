@@ -11,7 +11,7 @@ public class EnemyA : Enemy
     protected override void Start()
     {
         base.Start();
-        gameObjectPlayer = GameObject.Find("VirtualPlayer");
+        gameObjectPlayer = GameObject.FindGameObjectWithTag("Player");
         rbody2D = GetComponent<Rigidbody2D>();
     }
 
