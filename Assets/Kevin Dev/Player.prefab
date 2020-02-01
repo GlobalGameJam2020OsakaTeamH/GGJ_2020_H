@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1536633061544912280}
   - component: {fileID: 1536633061544912283}
   - component: {fileID: 1536633061544912282}
-  - component: {fileID: 1536633061544912281}
   - component: {fileID: 1536633061544912278}
   m_Layer: 8
   m_Name: Player
@@ -46,9 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833c9d4251ded45bf9ca47b2abdb1886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitLayer:
+    serializedVersion: 2
+    m_Bits: 256
   weaponLayer:
     serializedVersion: 2
     m_Bits: 512
+  bodyPrefab: {fileID: 6029947572050691220, guid: d079bf7b9de23418d8f85810051c42f4,
+    type: 3}
   swordPrefab: {fileID: 4159024967010902372, guid: 8d716c5263562477985d1e58d899fcaa,
     type: 3}
   gunPrefab: {fileID: 3166594633729696577, guid: fa93aaa8b70a44c0989972d244889373,
@@ -65,56 +69,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b0c919bf7f1e4043a29898eb8fdc13a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!212 &1536633061544912281
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536633061544912285}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3f6c246f3331f45deb525711b1553db8, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!50 &1536633061544912278
 Rigidbody2D:
   serializedVersion: 4
