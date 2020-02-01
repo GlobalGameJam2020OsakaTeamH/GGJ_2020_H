@@ -7,22 +7,26 @@ namespace GGJ2020 {
         Rigidbody2D body;
         Sword sword;
         Gun gun;
-        Vector2 direction;
+        Vector2 movement;
+        Vector2 orientation;
         float speed = 4;
 
         public void SetDirection(Vector2 direction) {
-            this.direction = direction;
+            movement = direction;
+            if (direction.magnitude > 0) {
+                orientation = direction.normalized;
+            }
         }
 
         public void UseSword() {
             if (sword) {
-                sword.Use(direction);
+                sword.Use(orientation);
             }
         }
 
         public void UseGun() {
             if (gun) {
-                gun.Use(direction);
+                gun.Use(orientation);
             }
         }
 
@@ -33,7 +37,7 @@ namespace GGJ2020 {
         }
 
         void Update() {
-            body.velocity = direction * speed;
+            body.velocity = movement * speed;
         }
     }
 }
