@@ -18,7 +18,7 @@ public abstract class ItemData : ScriptableObject
 
     public void UseItem()
     {
-        if (gears.Value >= GearCost && screws.Value >= ScrewCost)
+        if (CanUse() && gears.Value >= GearCost && screws.Value >= ScrewCost)
         {
             gears.Value -= GearCost;
             screws.Value -= ScrewCost;
@@ -27,6 +27,11 @@ public abstract class ItemData : ScriptableObject
 
     }
 
+
+    protected virtual bool CanUse()
+    {
+        return true;
+    }
 
     protected abstract void DoItemAction();
 }

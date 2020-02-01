@@ -15,8 +15,8 @@ MonoBehaviour:
   ItemImageSource: {fileID: 21300000, guid: 2bc59508829374ad2a2657456c2dc868, type: 3}
   ConsumeOnUse: 1
   NextItem: {fileID: 11400000, guid: b86a857a214c63d40b9c97f19415f6d4, type: 2}
-  GearCost: 10
-  ScrewCost: 10
+  GearCost: 15
+  ScrewCost: 15
   gears: {fileID: 11400000, guid: 2968d3a8d6c3c0d4c86361c283206482, type: 2}
   screws: {fileID: 11400000, guid: e91160f748a80854ea97b90a46c50984, type: 2}
   amount: 1

@@ -9,15 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 110200fdf050b3e4fa17034738ba3955, type: 3}
-  m_Name: HP_UP_3
+  m_Script: {fileID: 11500000, guid: b802df7a0345c3b45b24a5e55c0a7525, type: 3}
+  m_Name: FixSelf
   m_EditorClassIdentifier: 
-  ItemImageSource: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  ItemImageSource: {fileID: 0}
   ConsumeOnUse: 1
   NextItem: {fileID: 0}
-  GearCost: 10
-  ScrewCost: 10
+  GearCost: 0
+  ScrewCost: 0
   gears: {fileID: 11400000, guid: 2968d3a8d6c3c0d4c86361c283206482, type: 2}
   screws: {fileID: 11400000, guid: e91160f748a80854ea97b90a46c50984, type: 2}
-  amount: 1
+  amount: 0
+  UnitHealth: {fileID: 0}
   UnitMaxHealth: {fileID: 11400000, guid: b92ed05c3f9ce094786d400301309091, type: 2}
