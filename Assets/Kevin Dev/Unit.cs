@@ -6,6 +6,7 @@ namespace GGJ2020 {
     public class Unit : MonoBehaviour {
         Rigidbody2D body;
         Sword sword;
+        Gun gun;
         Vector2 direction;
         float speed = 4;
 
@@ -20,12 +21,15 @@ namespace GGJ2020 {
         }
 
         public void UseGun() {
-            Debug.Log($"Gun");
+            if (gun) {
+                gun.Use(direction);
+            }
         }
 
         void Start() {
             body = GetComponent<Rigidbody2D>();
             sword = GetComponentInChildren<Sword>();
+            gun = GetComponentInChildren<Gun>();
         }
 
         void Update() {
