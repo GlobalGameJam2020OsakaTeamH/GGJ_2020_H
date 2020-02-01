@@ -65,6 +65,7 @@ namespace GGJ2020 {
 
         void Start() {
             rigidBody = GetComponent<Rigidbody2D>();
+            body.SetCollisionHandler(GetComponent<BodyCollisionHandler>());
         }
 
         void Update() {
