@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class DroppedItem : MonoBehaviour
 {
-
     [SerializeField] float magnetSpeed;
     Vector2 startVelocity;
+    float decelerateScore;
 
     Rigidbody2D rbody2D;
 
@@ -45,12 +45,14 @@ public class DroppedItem : MonoBehaviour
             {
                 isMagnet = true;
             }
+            rbody2D.velocity *= decelerateScore;
         }
     }
 
-    public void Initialize(Vector2 startVelocity)
+    public void Initialize(Vector2 startVelocity, float decelerateScore)
     {
         this.startVelocity = startVelocity;
+        this.decelerateScore = decelerateScore;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
