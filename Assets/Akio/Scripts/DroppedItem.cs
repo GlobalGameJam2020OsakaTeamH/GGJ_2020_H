@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class DroppedItem : MonoBehaviour
 {
+    public Sprite screwSprite;
+    public Sprite gearSprite;
+
+    bool isScrew;
+
     [SerializeField] float magnetSpeed;
     Vector2 startVelocity;
     float accelerateScore;
@@ -22,6 +27,13 @@ public class DroppedItem : MonoBehaviour
         gameObjectTarget = GameObject.FindGameObjectWithTag("Player");
         rbody2D = GetComponent<Rigidbody2D>();
 
+        isScrew = Random.Range(0, 2) == 1;
+        if (isScrew) {
+            GetComponent<SpriteRenderer>().sprite = screwSprite;
+        } else {
+            GetComponent<SpriteRenderer>().sprite = gearSprite;
+        }
+
         StartCoroutine(Introduction());
     }
 
@@ -36,7 +48,6 @@ public class DroppedItem : MonoBehaviour
         if (isMagnet)
         {
 
-            
             Vector3 force = Vector3.Normalize(relative);
             Vector2 force2D = new Vector2(force.x, force.y) * magnetSpeed;
 
@@ -66,7 +77,11 @@ public class DroppedItem : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            Debug.Log("Got item");
+            if (isScrew) {
+                gameObjectTarget.GetComponent<PlayerInventory>().Screws += 1;
+            } else {
+                gameObjectTarget.GetComponent<PlayerInventory>().Gears += 1;
+            }
             Destroy(gameObject);
         }
     }

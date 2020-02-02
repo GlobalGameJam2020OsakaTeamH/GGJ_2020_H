@@ -117,6 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2b6c67b067364ffeba14950547b12c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  screwSprite: {fileID: 21300000, guid: 340f0592441698b4a9a882ed23a80251, type: 3}
+  gearSprite: {fileID: 21300000, guid: 8bfd80672c01033458ce69c49562b6ce, type: 3}
   magnetSpeed: 5
 --- !u!58 &5933190718018647105
 CircleCollider2D:
