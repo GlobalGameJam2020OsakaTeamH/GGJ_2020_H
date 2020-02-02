@@ -6,6 +6,7 @@ using GGJ2020;
 public class EnemyA : Enemy
 {
     const float ITEM_ACCELERATE_SCORE = 1.4f;
+    const float ITEM_DECELERATE_SCORE = 0.993f;
 
     [SerializeField] GameObject gameObjectItem;
     [SerializeField] GameObject gameObjectDestroyEffect;
@@ -26,10 +27,10 @@ public class EnemyA : Enemy
             Destroy(gameObject);
             if (true)
             {
-                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(-1.0f, -1.0f), ITEM_ACCELERATE_SCORE, 0.993f);
-                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(1.0f, 1.0f), ITEM_ACCELERATE_SCORE, 0.993f);
-                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(1.0f, -1.0f), ITEM_ACCELERATE_SCORE, 0.993f);
-                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(-1.0f, 1.0f), ITEM_ACCELERATE_SCORE, 0.993f);
+                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(-1.0f, -1.0f), ITEM_ACCELERATE_SCORE, ITEM_DECELERATE_SCORE);
+                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(1.0f, 1.0f), ITEM_ACCELERATE_SCORE, ITEM_DECELERATE_SCORE);
+                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(1.0f, -1.0f), ITEM_ACCELERATE_SCORE, ITEM_DECELERATE_SCORE);
+                Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(-1.0f, 1.0f), ITEM_ACCELERATE_SCORE, ITEM_DECELERATE_SCORE);
             }
         }
     }
@@ -54,6 +55,8 @@ public class EnemyA : Enemy
         Vector3 force = Vector3.Normalize(relative);
         Vector2 force2D = new Vector2(force.x, force.y);
 
+
         rbody2D.velocity = force2D;
+        Debug.Log(rbody2D.velocity);
     }
 }
