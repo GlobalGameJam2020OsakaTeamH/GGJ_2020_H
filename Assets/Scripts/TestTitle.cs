@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KikuchiTest : MonoBehaviour
+public class TestTitle : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -18,10 +18,5 @@ public class KikuchiTest : MonoBehaviour
             Manager.SceneMoveManager.Instance.Test = true;
             Manager.MainGameManager.Instance.StartGame();
         }
-    }
-
-    void OnCollisionEnter(Collision c)
-    {
-        Debug.Log("collision");
     }
 }

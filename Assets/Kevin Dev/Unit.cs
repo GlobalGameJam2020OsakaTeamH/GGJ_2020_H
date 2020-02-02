@@ -4,8 +4,8 @@ using UnityEngine;
 namespace GGJ2020 {
     [RequireComponent(typeof(Rigidbody2D))]
     public class Unit : MonoBehaviour {
-        public LayerMask unitLayer;
-        public LayerMask weaponLayer;
+        public int unitLayer;
+        public int weaponLayer;
         public GameObject bodyPrefab;
         public GameObject swordPrefab;
         public GameObject gunPrefab;
@@ -26,16 +26,28 @@ namespace GGJ2020 {
             }
         }
 
-        public void UseSword() {
+        public void SetSpeed(float speed) {
+            this.speed = speed;
+        }
+
+        public void UseSword(Vector2 swordDirection) {
             if (sword) {
-                sword.Use(orientation);
+                sword.Use(swordDirection);
+            }
+        }
+
+        public void UseSword() {
+            UseSword(orientation);
+        }
+
+        public void UseGun(Vector2 shootDirection) {
+            if (gun) {
+                gun.Use(shootDirection);
             }
         }
 
         public void UseGun() {
-            if (gun) {
-                gun.Use(orientation);
-            }
+            UseGun(orientation);
         }
 
         void Awake() {
@@ -57,6 +69,7 @@ namespace GGJ2020 {
 
         void Start() {
             rigidBody = GetComponent<Rigidbody2D>();
+            body.SetCollisionHandler(GetComponent<BodyCollisionHandler>());
         }
 
         void Update() {
