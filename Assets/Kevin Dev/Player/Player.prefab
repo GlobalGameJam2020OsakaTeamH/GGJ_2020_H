@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1536633061544912282}
   - component: {fileID: 1536633061544912278}
   - component: {fileID: 3803139205874248209}
+  - component: {fileID: 7530814318194186284}
+  - component: {fileID: 8325374117979741247}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -99,3 +101,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02f6c124e6a44005b19b5bb0ade260c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7530814318194186284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536633061544912285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e4abc9ed727f15419acae3176fbd866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHPRef: {fileID: 11400000, guid: b92ed05c3f9ce094786d400301309091, type: 2}
+  HPRef: {fileID: 11400000, guid: 6585671a987780a46b703dd1ae156a59, type: 2}
+  ArmorRef: {fileID: 11400000, guid: e6ef3c3d4dbc8184799e0bcb018d1348, type: 2}
+  SpeedRef: {fileID: 0}
+--- !u!114 &8325374117979741247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536633061544912285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a8246d6aeab9034783cb80a4f800864, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GearsRef: {fileID: 11400000, guid: 2968d3a8d6c3c0d4c86361c283206482, type: 2}
+  ScrewsRef: {fileID: 11400000, guid: e91160f748a80854ea97b90a46c50984, type: 2}
