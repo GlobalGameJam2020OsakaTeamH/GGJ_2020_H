@@ -6,7 +6,7 @@ using UnityEngine;
 public abstract class ItemData : ScriptableObject
 {
     public Sprite ItemImageSource;
- 
+
     public bool ConsumeOnUse = true;
     public ItemData NextItem;
 
@@ -16,17 +16,18 @@ public abstract class ItemData : ScriptableObject
     public IntegerBindingVariable screws;
 
 
-    public void UseItem()
+    public bool UseItem()
     {
         if (CanUse() && gears.Value >= GearCost && screws.Value >= ScrewCost)
         {
             gears.Value -= GearCost;
             screws.Value -= ScrewCost;
             DoItemAction();
+            return true;
         }
         else
         {
-            Debug.Log("Can't use this right now");
+            return false;
         }
 
     }

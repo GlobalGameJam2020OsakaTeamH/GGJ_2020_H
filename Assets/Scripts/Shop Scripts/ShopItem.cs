@@ -20,7 +20,9 @@ public class ShopItem : MonoBehaviour, IPointerClickHandler
     {
         if (Item != null)
         {
-            Item.UseItem();
+            if (!Item.UseItem()) {
+                return;
+            }
             if (Item.ConsumeOnUse)
             {
                 this.Item = Item.NextItem;
