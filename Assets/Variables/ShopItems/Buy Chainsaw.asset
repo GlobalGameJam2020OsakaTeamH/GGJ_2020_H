@@ -9,15 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 110200fdf050b3e4fa17034738ba3955, type: 3}
-  m_Name: HP_UP_3
+  m_Script: {fileID: 11500000, guid: ae5e2db64e45cc045937d1dba96147cf, type: 3}
+  m_Name: Buy Chainsaw
   m_EditorClassIdentifier: 
-  ItemImageSource: {fileID: 21300000, guid: 500a45895ca22504b9bc6b40e8b41eb1, type: 3}
+  ItemImageSource: {fileID: 21300000, guid: baff42b3f661e5645a068de0bd8d51f5, type: 3}
   ConsumeOnUse: 1
-  NextItem: {fileID: 0}
-  GearCost: 20
-  ScrewCost: 15
+  NextItem: {fileID: 11400000, guid: d4304ffd8ad2a1f4bb14b6ef6d6a7b67, type: 2}
+  GearCost: 5
+  ScrewCost: 20
   gears: {fileID: 11400000, guid: 2968d3a8d6c3c0d4c86361c283206482, type: 2}
   screws: {fileID: 11400000, guid: e91160f748a80854ea97b90a46c50984, type: 2}
-  amount: 1
-  UnitMaxHealth: {fileID: 11400000, guid: b92ed05c3f9ce094786d400301309091, type: 2}
