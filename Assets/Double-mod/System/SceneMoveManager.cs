@@ -15,7 +15,7 @@ namespace Manager
             Title,
             Game,
             Result,
-
+            Over,
             Max,
         }
 
@@ -115,6 +115,7 @@ namespace Manager
             //! とりあえず固定値でシーン名入れていく
             SceneNameList.Add("dobulemodTest");
             SceneNameList.Add("Game");
+            SceneNameList.Add("gameOver");
 
             DontDestroyOnLoad(this);
         }
