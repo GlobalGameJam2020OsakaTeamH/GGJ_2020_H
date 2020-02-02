@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1802610002274801211}
   - component: {fileID: 1802610002274801210}
+  - component: {fileID: 8730022001394138910}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -43,3 +44,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9944f1d1dc1574ef4b3d363629a67031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8730022001394138910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802610002274801212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 728c872e57e354197bafcc45c00fcfbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabEnemyA: {fileID: 8602696487056141755, guid: c193ecb3e8eb8445abf15aa4dc61439d,
+    type: 3}
+  prefabEnemyB: {fileID: 3023181325592982047, guid: a195c94a6b0434301af970c46a1ad9f7,
+    type: 3}
+  gameLevel: 1
