@@ -3,7 +3,7 @@
 namespace GGJ2020 {
     public class Body : MonoBehaviour {
         BodyCollisionHandler collisionHandler;
-        public void SetDirection(Vector2 direction) {
+        public virtual void SetDirection(Vector2 direction) {
 
         }
 

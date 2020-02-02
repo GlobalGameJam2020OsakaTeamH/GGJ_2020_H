@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5718446255378390433}
   - component: {fileID: 7167806699789002481}
   - component: {fileID: 5828046053614136937}
-  - component: {fileID: -8724505033491554269}
+  - component: {fileID: 6296745678821810743}
   m_Layer: 0
   m_Name: EnemyBBody
   m_TagString: Untagged
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 976698835
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 373ff5386f3184ef9b0cefabfbbe570f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c88fc668cebf66645830e32a21b5c677, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &-8724505033491554269
+--- !u!114 &6296745678821810743
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,9 +109,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1879659682900587338}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22518945f9b6742d4991df93e2e618c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ef61c8331c1448b2938ed41ea0fde23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameObjectCannon: {fileID: 7784580739470135929}
 --- !u!1 &7784580739470135929
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6795898387103978691
 Transform:
   m_ObjectHideFlags: 0
@@ -182,7 +183,7 @@ SpriteRenderer:
   m_SortingLayerID: 976698835
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 373ff5386f3184ef9b0cefabfbbe570f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 73488a0615b706e41a0f74dff6639b2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
