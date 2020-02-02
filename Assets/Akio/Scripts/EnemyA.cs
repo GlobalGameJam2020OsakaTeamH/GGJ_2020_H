@@ -24,6 +24,7 @@ public class EnemyA : Enemy
         if(life <= 0)
         {
             Instantiate(gameObjectDestroyEffect, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
+            SpawnManager.instance.enemies -= 1;
             Destroy(gameObject);
             switch (Random.Range(0, 4))
             {

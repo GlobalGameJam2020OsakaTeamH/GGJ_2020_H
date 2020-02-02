@@ -41,6 +41,7 @@ public class EnemyB : Enemy
         {
             Instantiate(gameObjectDestroyEffect, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
             Destroy(gameObject);
+            SpawnManager.instance.enemies -= 1;
             if (true)
             {
                 Instantiate(gameObjectItem, transform.position, new Quaternion(0.0f, 0.0f, 0.0f, 0.0f)).GetComponent<DroppedItem>().Initialize(new Vector2(-1.0f, -1.0f), ITEM_ACCELERATE_SCORE, ITEM_DECELERATE_SCORE) ;

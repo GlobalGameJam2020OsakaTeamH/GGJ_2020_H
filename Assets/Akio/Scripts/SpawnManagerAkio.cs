@@ -17,7 +17,7 @@ public class SpawnManagerAkio : MonoBehaviour
     }
 
 
-    void InitializeSpawn()
+    public void InitializeSpawn()
     {
         switch (gameLevel)
         {
@@ -27,6 +27,7 @@ public class SpawnManagerAkio : MonoBehaviour
                     Vector3 position = GetPositionByRadius(5.0f, 8.0f);
                     SpawnEnemyA(position);
                 }
+                SpawnManager.instance.enemies += 10;
                 break;
             case 2:
                 break;
@@ -38,7 +39,7 @@ public class SpawnManagerAkio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void SpawnEnemyA(Vector3 position)
