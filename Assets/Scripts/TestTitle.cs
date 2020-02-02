@@ -37,7 +37,7 @@ public class TestTitle : MonoBehaviour
             spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, spriteRenderer.color.a+Time.deltaTime*spd);
             if (TowerHealth.Value >0)
             {
-                dt += Time.deltaTime;
+                dt += Time.deltaTime * 2;
                 Debug.Log(dt);
                 if(dt>0.1f)
                 {

@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df80a41dc451a540975a383f60d8b72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spd: 0.1
+  spd: 0.2
   TitlePic: {fileID: 2106582665}
   TowerHealth: {fileID: 11400000, guid: b47918aca9e2fb44bb39059960a333db, type: 2}
 --- !u!212 &156185608
