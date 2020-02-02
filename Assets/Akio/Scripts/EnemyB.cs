@@ -13,6 +13,8 @@ public class EnemyB : Enemy
     Unit unit;
     GameObject gameObjectTarget;
 
+    GameObject gameObjectCannon;
+
     int life = 5;
 
     // Start is called before the first frame update
@@ -22,6 +24,8 @@ public class EnemyB : Enemy
         unit = GetComponent<Unit>();
         gameObjectTarget = GameObject.FindGameObjectWithTag("Player");
         StartCoroutine(IntervalShoot());
+
+        gameObjectCannon = unit.bodyPrefab.transform.Find("Cannon").gameObject;
     }
 
     // Update is called once per frame
@@ -31,7 +35,7 @@ public class EnemyB : Enemy
         float relativeX = gameObjectTarget.transform.position.x - transform.position.x;
         float relativeY = gameObjectTarget.transform.position.y - transform.position.y;
         float angle = Mathf.Atan2(relativeY, relativeX) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
+        gameObjectCannon.transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
     }
 
     public override void OnWeaponHit(Collision2D collision)
