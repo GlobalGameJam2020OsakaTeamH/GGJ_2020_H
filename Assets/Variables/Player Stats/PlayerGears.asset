@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64623b3093b3da643a00fe23b9df3608, type: 3}
   m_Name: PlayerGears
   m_EditorClassIdentifier: 
-  StartingValue: 0
-  value: 0
+  StartingValue: 100
+  value: 100

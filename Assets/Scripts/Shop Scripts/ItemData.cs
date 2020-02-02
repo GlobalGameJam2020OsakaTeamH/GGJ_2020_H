@@ -24,6 +24,10 @@ public abstract class ItemData : ScriptableObject
             screws.Value -= ScrewCost;
             DoItemAction();
         }
+        else
+        {
+            Debug.Log("Can't use this right now");
+        }
 
     }
 

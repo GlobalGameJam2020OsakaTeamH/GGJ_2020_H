@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FixTower
   m_EditorClassIdentifier: 
   ItemImageSource: {fileID: 0}
-  ConsumeOnUse: 1
+  ConsumeOnUse: 0
   NextItem: {fileID: 0}
   GearCost: 5
   ScrewCost: 15

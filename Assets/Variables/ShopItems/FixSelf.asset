@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: FixSelf
   m_EditorClassIdentifier: 
   ItemImageSource: {fileID: 0}
-  ConsumeOnUse: 1
+  ConsumeOnUse: 0
   NextItem: {fileID: 0}
   GearCost: 5
   ScrewCost: 5
   gears: {fileID: 11400000, guid: 2968d3a8d6c3c0d4c86361c283206482, type: 2}
   screws: {fileID: 11400000, guid: e91160f748a80854ea97b90a46c50984, type: 2}
   amount: 1
-  UnitHealth: {fileID: 0}
+  UnitHealth: {fileID: 11400000, guid: 6585671a987780a46b703dd1ae156a59, type: 2}
   UnitMaxHealth: {fileID: 11400000, guid: b92ed05c3f9ce094786d400301309091, type: 2}
