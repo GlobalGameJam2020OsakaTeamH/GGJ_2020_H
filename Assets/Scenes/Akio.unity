@@ -153,7 +153,7 @@ MonoBehaviour:
   prefabEnemyA: {fileID: 8602696487056141755, guid: c193ecb3e8eb8445abf15aa4dc61439d,
     type: 3}
   prefabEnemyB: {fileID: 0}
-  gameLevel: 0
+  gameLevel: 1
 --- !u!4 &121818162
 Transform:
   m_ObjectHideFlags: 0

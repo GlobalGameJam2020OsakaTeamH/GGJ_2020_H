@@ -41,6 +41,7 @@ public class EnemyA : Enemy
         unit = GetComponent<Unit>();
         gameObjectPlayer = GameObject.FindGameObjectWithTag("Player");
         rbody2D = GetComponent<Rigidbody2D>();
+        Debug.Log("Start Enemy A");
     }
 
     // Update is called once per frame
