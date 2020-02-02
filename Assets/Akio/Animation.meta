@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Main.meta
+guid: 202db7991de7aef48b709fcbac730b13
+=======
 guid: c80a39446ee6a42f7acbc43a1373a956
+>>>>>>> master:Assets/Akio/Animation.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: b802df7a0345c3b45b24a5e55c0a7525
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ItemImageSource: {instanceID: 0}
+  - NextItem: {instanceID: 0}
+  - gears: {fileID: 11400000, guid: 2968d3a8d6c3c0d4c86361c283206482, type: 2}
+  - screws: {fileID: 11400000, guid: e91160f748a80854ea97b90a46c50984, type: 2}
+  - UnitMaxHealth: {fileID: 11400000, guid: b92ed05c3f9ce094786d400301309091, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
