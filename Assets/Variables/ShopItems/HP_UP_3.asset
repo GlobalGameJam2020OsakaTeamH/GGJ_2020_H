@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 110200fdf050b3e4fa17034738ba3955, type: 3}
   m_Name: HP_UP_3
   m_EditorClassIdentifier: 
-  ItemImageSource: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  ItemImageSource: {fileID: 21300000, guid: 500a45895ca22504b9bc6b40e8b41eb1, type: 3}
   ConsumeOnUse: 1
   NextItem: {fileID: 0}
   GearCost: 25
