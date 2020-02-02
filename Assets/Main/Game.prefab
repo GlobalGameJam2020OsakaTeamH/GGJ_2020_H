@@ -328,7 +328,8 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 900334793859011206}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8942640042674721830, guid: daa003b08ac606a42a908ea898d42217, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: daa003b08ac606a42a908ea898d42217, type: 3}
 --- !u!4 &2965334788367118378 stripped
 Transform:
