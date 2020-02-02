@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b802df7a0345c3b45b24a5e55c0a7525, type: 3}
   m_Name: FixSelf
   m_EditorClassIdentifier: 
-  ItemImageSource: {fileID: 0}
+  ItemImageSource: {fileID: 21300000, guid: e00f4ce7ec941af4193b7280de9842b2, type: 3}
   ConsumeOnUse: 0
   NextItem: {fileID: 0}
   GearCost: 5

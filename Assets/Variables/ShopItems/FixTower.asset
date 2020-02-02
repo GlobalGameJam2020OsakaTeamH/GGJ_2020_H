@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5779afc94217282499969a1e36db6f8b, type: 3}
   m_Name: FixTower
   m_EditorClassIdentifier: 
-  ItemImageSource: {fileID: 0}
+  ItemImageSource: {fileID: 21300000, guid: 31fe4f781205ec84485cab1d3dac5240, type: 3}
   ConsumeOnUse: 0
   NextItem: {fileID: 0}
   GearCost: 5
