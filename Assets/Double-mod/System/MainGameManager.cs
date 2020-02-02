@@ -57,32 +57,32 @@ namespace Manager
                         _Time -= Time.deltaTime;
 
                     //    Debug.Log(_Time);
-                        if (_Time <= 0)
-                        {
-                            //! スコアを取得
-                            var score = 0;
-                            // typeで指定した型の全てのオブジェクトを配列で取得し,その要素数分繰り返す.
-                            foreach (GameObject obj in UnityEngine.Object.FindObjectsOfType(typeof(GameObject)))
-                            {
-                                // シーン上に存在するオブジェクトならば処理.
-                                //if (obj.activeInHierarchy)
-                                //{
-                                //    var score10 = obj.GetComponent<Score10>();
-                                //    if(score10!=null)
-                                //    {
-                                //        score = Score10.Score;
-                                //    }
-                                //}
-                            }
+                        // if (_Time <= 0)
+                        // {
+                        //     //! スコアを取得
+                        //     var score = 0;
+                        //     // typeで指定した型の全てのオブジェクトを配列で取得し,その要素数分繰り返す.
+                        //     foreach (GameObject obj in UnityEngine.Object.FindObjectsOfType(typeof(GameObject)))
+                        //     {
+                        //         // シーン上に存在するオブジェクトならば処理.
+                        //         //if (obj.activeInHierarchy)
+                        //         //{
+                        //         //    var score10 = obj.GetComponent<Score10>();
+                        //         //    if(score10!=null)
+                        //         //    {
+                        //         //        score = Score10.Score;
+                        //         //    }
+                        //         //}
+                        //     }
 
-                            var data = new Data.ScoreData();
-                            data.Score = score;
-                            data.IsNew = true;
-                            ScoreManager.Instance.AddScore(data);
-                            //! ゲーム終了
-                            State = GameState.End;
-                         //   SceneMoveManager.Instance.SetNextScene(SceneMoveManager.SceneType.Result);
-                        }
+                        //     var data = new Data.ScoreData();
+                        //     data.Score = score;
+                        //     data.IsNew = true;
+                        //     ScoreManager.Instance.AddScore(data);
+                        //     //! ゲーム終了
+                        //     State = GameState.End;
+                        //  //   SceneMoveManager.Instance.SetNextScene(SceneMoveManager.SceneType.Result);
+                        // }
                     }
                     break;
                 case GameState.End:
