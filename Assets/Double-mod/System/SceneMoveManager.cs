@@ -79,7 +79,7 @@ namespace Manager
             // NextScene = type;
             if (CurrentScene == SceneType.Game)
             {
-                //! kaetai 
+                //! kaetai
                 MainGameManager.Instance.StartGame();
             }
 
@@ -114,7 +114,7 @@ namespace Manager
 
             //! とりあえず固定値でシーン名入れていく
             SceneNameList.Add("dobulemodTest");
-            SceneNameList.Add("Akio");
+            SceneNameList.Add("Game");
 
             DontDestroyOnLoad(this);
         }
