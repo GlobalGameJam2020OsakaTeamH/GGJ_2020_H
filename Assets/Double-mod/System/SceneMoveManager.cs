@@ -114,7 +114,7 @@ namespace Manager
 
             //! とりあえず固定値でシーン名入れていく
             SceneNameList.Add("dobulemodTest");
-            SceneNameList.Add("Main");
+            SceneNameList.Add("Akio");
 
             DontDestroyOnLoad(this);
         }
