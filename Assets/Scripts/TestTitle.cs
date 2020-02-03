@@ -38,13 +38,13 @@ public class TestTitle : MonoBehaviour
                 {
                     titleRenderer.color = new Color(titleRenderer.color.r, titleRenderer.color.g, titleRenderer.color.b, titleRenderer.color.a + Time.deltaTime * spd*2);
                 }
-               
+
             }
             spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, spriteRenderer.color.a+Time.deltaTime*spd);
             if (TowerHealth.Value >0)
             {
                 dt += Time.deltaTime * 2;
-                Debug.Log(dt);
+                // Debug.Log(dt);
                 if(dt>0.1f)
                 {
                     dt = 0;

@@ -23,7 +23,7 @@ public class EnemyBBody : Body
         float relativeX = gameObjectTarget.transform.position.x - transform.position.x;
         float relativeY = gameObjectTarget.transform.position.y - transform.position.y;
         float angle = Mathf.Atan2(relativeY, relativeX) * Mathf.Rad2Deg;
-        Debug.Log("Cannon:" + angle);
+        // Debug.Log("Cannon:" + angle);
         gameObjectCannon.transform.rotation = Quaternion.Euler(0.0f, 0.0f, angle);
     }
 }

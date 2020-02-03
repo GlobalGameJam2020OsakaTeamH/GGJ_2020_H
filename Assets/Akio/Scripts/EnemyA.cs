@@ -74,6 +74,6 @@ public class EnemyA : Enemy
 
 
         rbody2D.velocity = force2D;
-        Debug.Log(rbody2D.velocity);
+        // Debug.Log(rbody2D.velocity);
     }
 }
