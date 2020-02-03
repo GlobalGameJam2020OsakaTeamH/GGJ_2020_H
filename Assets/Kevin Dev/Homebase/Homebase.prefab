@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 2730624225389082174}
   - component: {fileID: 2730624225389082169}
   - component: {fileID: 2730624225389082168}
+  - component: {fileID: 3861241923989292438}
   m_Layer: 0
-  m_Name: "\u96FB\u6CE2\u5854\u30A2\u30CB\u30E1\u30FC\u30B7\u30E7\u30F31"
+  m_Name: Homebase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,3 +104,17 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dc0bc11e75ef82b4d94fad8d99df855b, type: 3}
   - {fileID: 21300000, guid: eb82dd7d9e6f069418a3b884a5253214, type: 3}
   - {fileID: 21300000, guid: 71a15f0f40045b4458005282695ade06, type: 3}
+--- !u!114 &3861241923989292438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2730624225389082171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23d7bdb27befd46e98b9a889a6fae7e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 0}
+  menumessage: {fileID: 0}
