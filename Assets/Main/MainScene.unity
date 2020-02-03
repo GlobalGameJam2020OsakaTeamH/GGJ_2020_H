@@ -357,7 +357,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cdd5fefc95b93146813809867117cc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneNameList: []
+  SceneNameList:
+  - TitleScene
+  - Game
+  - gameOver
   Move: 0
   Test: 0
 --- !u!1 &1679674746
