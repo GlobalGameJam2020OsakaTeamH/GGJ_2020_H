@@ -18,9 +18,15 @@ public class ShopItem : MonoBehaviour, IPointerClickHandler
     public IntegerMediator ScrewMediator;
     public void OnPointerClick(PointerEventData eventData)
     {
+        Activate();
+    }
+
+    public void Activate()
+    {
         if (Item != null)
         {
-            if (!Item.UseItem()) {
+            if (!Item.UseItem())
+            {
                 return;
             }
             if (Item.ConsumeOnUse)
@@ -33,7 +39,6 @@ public class ShopItem : MonoBehaviour, IPointerClickHandler
             }
         }
     }
-
 
     private void OnEnable()
     {
