@@ -11,7 +11,7 @@ namespace GGJ2020 {
         }
 
         void Update() {
-            if (MainGameManager.Instance.Paused) {
+            if (MainGameManager.Instance && MainGameManager.Instance.Paused) {
                 return;
             }
 

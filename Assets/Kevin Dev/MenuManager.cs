@@ -21,6 +21,9 @@ public class MenuManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (!player) {
+            return;
+        }
         switch (state) {
             case State.AtBase:
                 if (Input.GetButtonDown("Menu")) {
