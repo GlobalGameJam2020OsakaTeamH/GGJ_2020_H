@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Manager;
 
 namespace GGJ2020 {
     [RequireComponent(typeof(Unit))]
@@ -10,6 +11,10 @@ namespace GGJ2020 {
         }
 
         void Update() {
+            if (MainGameManager.Instance.Paused) {
+                return;
+            }
+
             unit.SetDirection(InputDirection);
             if (UseSword) {
                 unit.UseSword();

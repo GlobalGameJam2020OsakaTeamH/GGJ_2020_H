@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using Manager;
 
 public class MenuManager : MonoBehaviour {
     public GameObject menu;
@@ -51,13 +52,13 @@ public class MenuManager : MonoBehaviour {
         state = State.MenuOpen;
         menumessage.SetActive(false);
         menu.SetActive(true);
-        Time.timeScale = 0;
+        MainGameManager.Instance.Paused = true;
     }
 
     public void CloseMenu() {
         state = State.AtBase;
         menumessage.SetActive(true);
         menu.SetActive(false);
-        Time.timeScale = 1;
+        MainGameManager.Instance.Paused = false;
     }
 }
