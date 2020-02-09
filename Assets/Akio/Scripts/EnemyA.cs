@@ -5,8 +5,6 @@ using GGJ2020;
 
 public class EnemyA : Enemy
 {
-    const float ITEM_ACCELERATE_SCORE = 1.4f;
-    const float ITEM_DECELERATE_SCORE = 0.993f;
 
     [SerializeField] GameObject gameObjectItem;
     [SerializeField] GameObject gameObjectDestroyEffect;
@@ -64,13 +62,9 @@ public class EnemyA : Enemy
     protected override void Update()
     {
         base.Update();
-        float relativeX = gameObjectPlayer.transform.position.x - transform.position.x;
-        float relativeY = gameObjectPlayer.transform.position.y - transform.position.y;
-        float relativeZ = gameObjectPlayer.transform.position.z - transform.position.z;
 
-        Vector3 relative = new Vector3(relativeX, relativeY, relativeZ);
-        Vector3 force = Vector3.Normalize(relative);
-        Vector2 force2D = new Vector2(force.x, force.y);
+        Vector2 relative = gameObjectPlayer.transform.position - transform.position;
+        Vector2 force2D = relative.normalized;
 
 
         rbody2D.velocity = force2D;
