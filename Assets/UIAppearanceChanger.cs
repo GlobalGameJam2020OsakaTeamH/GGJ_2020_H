@@ -13,6 +13,8 @@ public class UIAppearanceChanger : MonoBehaviour
 
 
     public void SetActive(){
+        if(this.SelectionCursor == null)
+            Start();
         SelectionCursor.enabled = true;
     }
 

@@ -11,6 +11,8 @@ public class UIActivator : MonoBehaviour
     public UIActivator RightActivator;
     public UIActivator UpActivator;
     public UIActivator DownActivator;
+    [HideInInspector]
+    public UIAppearanceChanger AppearanceChanger;
 
     private ShopItem CustomShopItem;
     private Button UIButton;
@@ -18,6 +20,7 @@ public class UIActivator : MonoBehaviour
     private void Start() {
         CustomShopItem = GetComponent<ShopItem>();
         UIButton = GetComponent<Button>();
+        AppearanceChanger = GetComponent<UIAppearanceChanger>();
     }
 
 

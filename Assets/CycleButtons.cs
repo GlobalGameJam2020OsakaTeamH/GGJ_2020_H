@@ -7,48 +7,73 @@ public class CycleButtons : MonoBehaviour
     public float CooldownDuration = .2f;
     private float cooldown = 0f;
     private UIActivator currentActivator;
-    private void OnEnable() {
-        if(!currentActivator)
-        currentActivator = GetComponentInChildren<UIActivator>();
-
+    private void OnEnable()
+    {
+        if (!currentActivator)
+            currentActivator = GetComponentInChildren<UIActivator>();
+        if (currentActivator.AppearanceChanger == null)
+        {
+            currentActivator.AppearanceChanger = currentActivator.GetComponent<UIAppearanceChanger>();
+        }
+        currentActivator.AppearanceChanger.SetActive();
     }
-    
 
-    private void Update() {
+    private void OnDisable()
+    {
+        currentActivator.AppearanceChanger.SetInactive();
+    }
+
+
+    private void Update()
+    {
         cooldown -= Time.deltaTime;
-        if(cooldown <= 0)
-        cooldown = 0;
+        if (cooldown <= 0)
+            cooldown = 0;
         else
             return;
 
         float horAxis;
         float vertAxis;
 
-        if(Input.GetButtonDown("Fire1") || Input.GetButton("Fire2")){
+        if (Input.GetButtonDown("Fire1") || Input.GetButton("Fire2"))
+        {
 
         }
-        else if((horAxis = Input.GetAxis("Horizontal")) != 0){
-            if(horAxis > 0 && currentActivator.RightActivator){
-                currentActivator = currentActivator.RightActivator;
-                cooldown = CooldownDuration;
+        else if ((horAxis = Input.GetAxis("Horizontal")) != 0)
+        {
+            if (horAxis > 0 && currentActivator.RightActivator)
+            {
+                ChangeActiveUIElement(currentActivator.RightActivator);
             }
-            else if(horAxis < 0 && currentActivator.LeftActivator){
-                currentActivator = currentActivator.LeftActivator;
-                cooldown = CooldownDuration;
+            else if (horAxis < 0 && currentActivator.LeftActivator)
+            {
+                ChangeActiveUIElement(currentActivator.LeftActivator);
             }
         }
-        else if((vertAxis = Input.GetAxis("Vertical")) != 0){
-            if(vertAxis > 0 && currentActivator.UpActivator){
-                currentActivator = currentActivator.UpActivator;
-                cooldown = CooldownDuration;
+        else if ((vertAxis = Input.GetAxis("Vertical")) != 0)
+        {
+            if (vertAxis > 0 && currentActivator.UpActivator)
+            {
+                ChangeActiveUIElement(currentActivator.UpActivator);
             }
-            else if(vertAxis < 0 && currentActivator.DownActivator){
-                currentActivator = currentActivator.DownActivator;
-                cooldown = CooldownDuration;
-            }   
+            else if (vertAxis < 0 && currentActivator.DownActivator)
+            {
+                ChangeActiveUIElement(currentActivator.DownActivator);
+            }
         }
 
 
     }
 
+    private void ChangeActiveUIElement(UIActivator newUIElement)
+    {
+        while(newUIElement.enabled = false){
+            newUIElement = newUIElement.UpActivator;
+        }
+        currentActivator.AppearanceChanger.SetInactive();
+        currentActivator = newUIElement;
+        currentActivator.AppearanceChanger.SetActive();
+        cooldown = CooldownDuration;
+
+    }
 }
