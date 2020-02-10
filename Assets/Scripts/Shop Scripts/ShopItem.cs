@@ -42,7 +42,7 @@ public class ShopItem : MonoBehaviour, IPointerClickHandler
 
     private void OnEnable()
     {
-        DisplayPicture = GetComponentInChildren<Image>();
+        DisplayPicture = GetComponentsInChildren<Image>()[1];
         InitializeDisplay();
     }
 

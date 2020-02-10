@@ -12,18 +12,18 @@ public class UIActivator : MonoBehaviour
     public UIActivator UpActivator;
     public UIActivator DownActivator;
 
-    private ShopItem UIImage;
+    private ShopItem CustomShopItem;
     private Button UIButton;
 
     private void Start() {
-        UIImage = GetComponent<ShopItem>();
+        CustomShopItem = GetComponent<ShopItem>();
         UIButton = GetComponent<Button>();
     }
 
 
     public void ActivateButton(){
-        if(UIImage){
-            UIImage.Activate();
+        if(CustomShopItem){
+            CustomShopItem.Activate();
         }
         else if(UIButton != null){
             UIButton.Select();
