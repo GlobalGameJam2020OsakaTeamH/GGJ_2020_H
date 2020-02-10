@@ -8,7 +8,8 @@ public class UIAppearanceChanger : MonoBehaviour
 
     public Image SelectionCursor;
     private void Start() {
-        this.SelectionCursor = GetComponent<Image>();
+        if(SelectionCursor == null)
+            this.SelectionCursor = GetComponent<Image>();
     }
 
 

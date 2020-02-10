@@ -37,7 +37,7 @@ public class CycleButtons : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") || Input.GetButton("Fire2"))
         {
-
+            currentActivator.ActivateButton();
         }
         else if ((horAxis = Input.GetAxis("Horizontal")) != 0)
         {
