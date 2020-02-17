@@ -38,7 +38,7 @@ public class EnemyB : Enemy
         {
             Instantiate(gameObjectDestroyEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            SpawnManager.instance.enemies -= 1;
+            SpawnManager.Instance.enemies -= 1;
             if (true)
             {
                 Instantiate(gameObjectItem, transform.position, Quaternion.identity).GetComponent<Rigidbody2D>().velocity = new Vector2(-1.0f, -1.0f);

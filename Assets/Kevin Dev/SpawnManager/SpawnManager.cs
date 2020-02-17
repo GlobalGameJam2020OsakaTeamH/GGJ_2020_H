@@ -1,13 +1,13 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using UnityEngine;
 
-public class SpawnManager : MonoBehaviour {
+using GGJ2020.Util;
 
-    public static SpawnManager instance;
+public class SpawnManager : SingletonBase<SpawnManager> {
+
     public static Transform parentTransform;
     void Awake() {
         SpawnManager.parentTransform = this.gameObject.transform;
-        SpawnManager.instance = this;
         StartCoroutine(CheckForRespawn());
     }
 

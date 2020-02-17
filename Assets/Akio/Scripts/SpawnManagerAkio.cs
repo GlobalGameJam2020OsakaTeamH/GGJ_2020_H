@@ -28,7 +28,7 @@ public class SpawnManagerAkio : MonoBehaviour
                     SpawnEnemyA(position);
                 }
                 Instantiate(prefabEnemyB, GetPositionByRadius(5.0f, 8.0f), new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
-                SpawnManager.instance.enemies += 11;
+                SpawnManager.Instance.enemies += 11;
                 break;
             case 2:
                 break;

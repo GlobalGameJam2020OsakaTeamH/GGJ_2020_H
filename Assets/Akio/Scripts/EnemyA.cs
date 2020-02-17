@@ -22,7 +22,7 @@ public class EnemyA : Enemy
         if(life <= 0)
         {
             Instantiate(gameObjectDestroyEffect, transform.position, Quaternion.identity);
-            SpawnManager.instance.enemies -= 1;
+            SpawnManager.Instance.enemies -= 1;
             Destroy(gameObject);
             switch (Random.Range(0, 4))
             {
