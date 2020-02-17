@@ -59,7 +59,7 @@ public class EnemyB : Enemy
             Debug.Log(direction);
             unit.SetDirection(direction);
             unit.UseGun();
-            yield return new WaitForSeconds(0.8f);
+            yield return new GameTime.WaitForSeconds(0.8f);
         }
     }
 }

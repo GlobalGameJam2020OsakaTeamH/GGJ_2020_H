@@ -9,7 +9,7 @@ namespace GGJ2020 {
         }
 
         IEnumerator DestroyBlade() {
-            yield return new WaitForSeconds(0.3f);
+            yield return new GameTime.WaitForSeconds(0.3f);
             Destroy(gameObject);
         }
     }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
+using GGJ2020;
 using GGJ2020.Util;
 
 public class SpawnManager : SingletonBase<SpawnManager> {
@@ -15,7 +16,7 @@ public class SpawnManager : SingletonBase<SpawnManager> {
 
     IEnumerator CheckForRespawn() {
         while (true) {
-            yield return new WaitForSeconds(5);
+            yield return new GameTime.WaitForSeconds(5);
             if (enemies < 3) {
                 GetComponent<SpawnManagerAkio>().InitializeSpawn();
             }

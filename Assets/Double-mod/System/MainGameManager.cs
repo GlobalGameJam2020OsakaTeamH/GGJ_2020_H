@@ -27,23 +27,6 @@ namespace Manager
         }
 
         public GameState State = GameState.None;
-
-
-        private bool paused;
-        public bool Paused {
-            get {
-                return paused;
-            }
-            set {
-                paused = value;
-                if (paused) {
-                    Time.timeScale = 0;
-                } else {
-                    Time.timeScale = 1;
-                }
-            }
-        }
-
         #endregion
 
         public void StartGame()

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Manager;
 
 namespace GGJ2020 {
     [RequireComponent(typeof(Unit))]
@@ -11,7 +10,7 @@ namespace GGJ2020 {
         }
 
         void Update() {
-            if (MainGameManager.Instance && MainGameManager.Instance.Paused) {
+            if (GameTime.Instance && GameTime.Instance.Paused) {
                 return;
             }
 

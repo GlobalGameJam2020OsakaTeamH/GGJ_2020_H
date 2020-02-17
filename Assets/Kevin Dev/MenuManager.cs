@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using Manager;
+using GGJ2020;
 
 public class MenuManager : MonoBehaviour {
     public GameObject menu;
@@ -55,13 +55,13 @@ public class MenuManager : MonoBehaviour {
         state = State.MenuOpen;
         menumessage.SetActive(false);
         menu.SetActive(true);
-        MainGameManager.Instance.Paused = true;
+        GameTime.Instance.Paused = true;
     }
 
     public void CloseMenu() {
         state = State.AtBase;
         menumessage.SetActive(true);
         menu.SetActive(false);
-        MainGameManager.Instance.Paused = false;
+        GameTime.Instance.Paused = false;
     }
 }
