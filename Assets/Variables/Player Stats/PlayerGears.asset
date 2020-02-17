@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PlayerGears
   m_EditorClassIdentifier: 
   StartingValue: 0
-  value: 100
+  value: 30
