@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
+using GGJ2020.Util;
 
 namespace Manager
 {
@@ -83,7 +83,7 @@ namespace Manager
         // Update is called once per frame
         void Update()
         {
-     
+
             //if (test)
             //{
             //    var data = new Data.ScoreData();
