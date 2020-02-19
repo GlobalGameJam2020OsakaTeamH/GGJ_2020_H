@@ -1,11 +1,11 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIActivator : MonoBehaviour
 {
-    
+
 
     public UIActivator LeftActivator;
     public UIActivator RightActivator;
@@ -29,7 +29,7 @@ public class UIActivator : MonoBehaviour
             CustomShopItem.Activate();
         }
         else if(UIButton != null){
-            UIButton.Select();
+            UIButton.OnSubmit(null);
         }
     }
 }

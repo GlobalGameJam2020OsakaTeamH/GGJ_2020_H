@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,7 +35,7 @@ public class CycleButtons : MonoBehaviour
         float horAxis;
         float vertAxis;
 
-        if (Input.GetButtonDown("Fire1") || Input.GetButton("Fire2"))
+        if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2"))
         {
             currentActivator.ActivateButton();
         }
