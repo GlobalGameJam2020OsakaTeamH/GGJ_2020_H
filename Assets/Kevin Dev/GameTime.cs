@@ -14,6 +14,10 @@ namespace GGJ2020 {
         paused = value;
         Physics2D.autoSimulation = !value;
 
+        foreach (Animator animator in FindObjectsOfType(typeof(Animator)) as Animator[]) {
+          animator.enabled = !value;
+        }
+
         if (!value) {
           timeDelta = 0;
         }
