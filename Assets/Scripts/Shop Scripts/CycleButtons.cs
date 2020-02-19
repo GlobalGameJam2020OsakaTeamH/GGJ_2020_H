@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CycleButtons : MonoBehaviour
 {
-    public float CooldownDuration = .2f;
+    public float CooldownDuration = .5f;
     private float cooldown = 0f;
     private UIActivator currentActivator;
     private void OnEnable()
