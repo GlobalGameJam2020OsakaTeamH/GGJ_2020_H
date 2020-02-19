@@ -38,7 +38,7 @@ namespace GGJ2020 {
       float startTime;
       float seconds;
       public WaitForSeconds(float seconds) {
-        startTime = UnityEngine.Time.time;
+        startTime = GameTime.Instance.time;
         this.seconds = seconds;
       }
       public override bool keepWaiting {
