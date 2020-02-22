@@ -23,6 +23,9 @@ namespace GGJ2020 {
             if (direction.magnitude > 0) {
                 orientation = direction.normalized;
                 body.SetDirection(orientation);
+                body.SetSpeed(speed);
+            } else {
+                body.SetSpeed(0);
             }
         }
 
